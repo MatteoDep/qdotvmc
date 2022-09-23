@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for N in 2 3 400 401 420 5 6
+do
+	gnuplot -e "N=${N}" script_N
+	pdflatex surf"${N}".tex
+	pdflatex surf"${N}"ab.tex
+	#pdflatex surf"${N}"abv.tex
+	pdflatex contour"${N}".tex
+done
+
+rm *.tex *.eps *converted* *.aux *.log
+rm cont path
+cp *.pdf ../../dissertation/Graphics/

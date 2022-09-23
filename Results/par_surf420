@@ -1,0 +1,6 @@
+data_surf="surf420"
+Npoints=21
+a_min=0.8
+a_max=1.2
+b_min=0.4
+b_max=0.8
